@@ -17,22 +17,22 @@ function destructivelyRemoveFirstCat(){
     cats.shift();
 }
 
-function appendCat(){
-    cats.splice("Broom");
-    return cats;
+function appendCat(name){
+    return [...cats,name];
 }
 
-function prependCat(){
-    cats.slice("name");
-    return cats;
+function prependCat(name){
+    return [name,...cats];
 }
 
-function removeLastCat(){
-    cats.slice(2);
-    return cats;
+function removeLastCat(newCats){
+    newCats = [...cats];
+    newCats.pop();
+    return newCats;
 }
 
-function removeFirstCat(){
-    cats.slice(0);
-    return cats;
+function removeFirstCat(newCats){
+    newCats = [...cats];
+    newCats.shift();
+    return newCats;
 }
